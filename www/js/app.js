@@ -21,7 +21,9 @@
 // ...additional event handlers here...
 function testajax(){
     $.ajax({
-        type:'GET',
+        type:'POST',
+		dataType: 'json',
+        crossDomain: true,
         url:'http://time.jsontest.com/',
         error: function(response, d, a){
             alert(response + d + a) ;  
