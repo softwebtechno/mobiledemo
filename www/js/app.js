@@ -22,7 +22,7 @@
 function testajax(){
     $.ajax({
         type: "POST",
-        url: 'http://time.jsontest.com/',
+        url: 'http://softwebtechno.com/getcategory.php',
         dataType: 'json',
 		cache:false,
         crossDomain: true,
