@@ -21,12 +21,12 @@
 // ...additional event handlers here...
 function testajax(){
     $.ajax({
-        "method": "POST",
-        "url": 'http://time.jsontest.com/',
+        type: "POST",
+        url: 'http://time.jsontest.com/',
         dataType: 'json',
 		cache:false,
         crossDomain: true,
-          error: function (jqXHR, textStatus, errorThrown) {
+        error: function (jqXHR, textStatus, errorThrown) {
             alert('new textStatus=' + textStatus + ' errorThrown=' + errorThrown);
         },
         success: function (response) {
