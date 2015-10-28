@@ -21,6 +21,20 @@
 // ...additional event handlers here...
 function testajax(){
     $.ajax({
+        "method": "POST",
+        "url": 'http://time.jsontest.com/',
+        dataType: 'json',
+		cache:false,
+        crossDomain: true,
+          error: function (jqXHR, textStatus, errorThrown) {
+            alert('new textStatus=' + textStatus + ' errorThrown=' + errorThrown);
+        },
+        success: function (response) {
+			alert(JSON.stringify(response));     
+		}
+});
+
+/*	$.ajax({
         type:'POST',
 		dataType: 'json',
         crossDomain: true,
@@ -32,5 +46,5 @@ function testajax(){
             alert(JSON.stringify(response));        
         }
     });
-
+*/
 }
